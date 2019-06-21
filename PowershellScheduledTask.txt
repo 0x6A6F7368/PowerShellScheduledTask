@@ -1,4 +1,4 @@
-REM RubberDucky Powershell and Scheduled Tasks
+REM RubberDucky Powershell Scheduled Task
 DELAY 500
 GUI r
 DELAY 500
